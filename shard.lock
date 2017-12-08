@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  uuid:
+    github: wontruefree/uuid
+    commit: ff2f1f3fb06e6cac0eac611a6abc1fbcfe865615
+

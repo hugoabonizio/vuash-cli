@@ -1,0 +1,17 @@
+name: vuash
+version: 0.1.0
+
+authors:
+  - Hugo Abonizio <hugo_abonizio@hotmail.com>
+
+targets:
+  vuash:
+    main: src/vuash.cr
+
+dependencies:
+  uuid:
+    github: wontruefree/uuid
+
+crystal: 0.23.1
+
+license: MIT
