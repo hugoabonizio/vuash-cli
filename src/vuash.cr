@@ -5,6 +5,8 @@ module Vuash
 
   class InvalidPassword < Exception; end
 
+  class MessageNotFound < Exception; end
+
   # TODO replace with actual URL
   URL = "http://localhost:3000/"
 

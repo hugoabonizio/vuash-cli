@@ -34,6 +34,8 @@ module Vuash
       raise InvalidPassword.new unless password
       result = Reader.run(uuid, password)
       puts "Message: #{result}"
+    rescue ex : MessageNotFound
+      puts "Message not found!"
     rescue ex : ServerException
       puts "Error: #{ex}"
     end
