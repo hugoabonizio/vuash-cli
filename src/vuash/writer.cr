@@ -6,10 +6,10 @@ module Vuash::Writer
 
   def run(message)
     headers = HTTP::Headers{"Accept" => "application/json"}
-    secret = UUID.new.to_s
+    secret = UUID.random.to_s
     encrypted = AES.encrypt(message, secret)
     body = {"message[data]" => encrypted}
-    response = HTTP::Client.post_form("#{URL}", headers: headers, form: body)
+    response = HTTP::Client.post("#{URL}", headers, form: body)
     result = parse(response.body)
 
     return {id: result, secret: secret} if result
